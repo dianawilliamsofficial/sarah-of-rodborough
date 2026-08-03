@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sarah of Rodborough — a novel by Di Williams</title>
+<meta name="description" content="Sarah of Rodborough: a historical novel by Di Williams, drawn from the record of Sarah Tucker Bucknall, who sailed from Stroud to Port Phillip in 1843.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Archivo:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#2E2A24;
+    --gold:#9C7A33;
+    --soft:#6B6459;
+    --rule:#CBB682;
+    --paper:#E9E5DB;
+    --paper-deep:#DFDACE;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"EB Garamond",Garamond,Georgia,serif;
+    font-size:1.15rem;
+    line-height:1.65;
+  }
+  .wrap{max-width:44rem;margin:0 auto;padding:0 1.5rem}
+  .label{
+    font-family:Archivo,system-ui,sans-serif;
+    font-size:.66rem;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    color:var(--soft);
+  }
+
+  /* ── Hero: the manifest ─────────────────────────────── */
+  header{padding:4.5rem 0 3.5rem}
+  .ship{margin-bottom:2.75rem}
+  .ship .label{display:block;margin-bottom:.4rem}
+  .ship h1{
+    font-size:clamp(1.6rem,6vw,2.3rem);
+    font-weight:500;
+    font-style:italic;
+    margin:0;
+    letter-spacing:.01em;
+  }
+  .ship p{margin:.3rem 0 0;color:var(--soft);font-size:1rem}
+
+  .manifest{
+    border-top:1px solid var(--rule);
+    border-bottom:1px solid var(--rule);
+    padding:.25rem 0;
+  }
+  .row{
+    display:grid;
+    grid-template-columns:2.2rem 1fr;
+    gap:1rem;
+    padding:.85rem 0;
+    border-bottom:1px solid rgba(203,182,130,.45);
+  }
+  .row:last-child{border-bottom:0}
+  .row .no{font-family:Archivo,sans-serif;font-size:.8rem;color:var(--rule);padding-top:.35rem}
+  .row .name{font-size:1.2rem}
+  .row .desc{font-family:Archivo,sans-serif;font-size:.78rem;color:var(--soft);letter-spacing:.04em;margin-top:.15rem}
+  .row.her .name{color:var(--gold)}
+  .row.her .name::after{
+    content:"";
+    display:block;
+    height:1px;
+    background:var(--gold);
+    width:0;
+    animation:draw 1.1s .5s ease-out forwards;
+  }
+  @keyframes draw{to{width:5.5rem}}
+  @media (prefers-reduced-motion:reduce){.row.her .name::after{width:5.5rem;animation:none}}
+
+  .thesis{
+    margin:2.25rem 0 0;
+    font-size:1.3rem;
+    line-height:1.5;
+  }
+  .thesis em{color:var(--gold);font-style:italic}
+
+  /* ── Sections ───────────────────────────────────────── */
+  section{padding:3.25rem 0;border-top:1px solid rgba(203,182,130,.55)}
+  section h2{
+    font-family:Archivo,sans-serif;
+    font-size:.7rem;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    color:var(--soft);
+    font-weight:500;
+    margin:0 0 1.4rem;
+  }
+  p{margin:0 0 1.1rem}
+  p:last-child{margin-bottom:0}
+  .lead{font-size:1.28rem;line-height:1.55}
+  blockquote{
+    margin:2rem 0;
+    padding-left:1.25rem;
+    border-left:2px solid var(--rule);
+    font-style:italic;
+    color:var(--soft);
+  }
+  .note{font-size:.95rem;color:var(--soft)}
+  a{color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(156,122,51,.4)}
+  a:hover{border-bottom-color:var(--gold)}
+  a:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+  footer{
+    padding:3rem 0 4rem;
+    border-top:1px solid rgba(203,182,130,.55);
+    font-size:.9rem;
+    color:var(--soft);
+  }
+</style>
+</head>
+<body>
+
+<header class="wrap">
+  <div class="ship">
+    <span class="label">Barque <em>Lord Keane</em> · Plymouth to Port Phillip · 1843</span>
+    <h1>Sarah of Rodborough</h1>
+    <p>A novel by Di Williams</p>
+  </div>
+
+  <div class="manifest">
+    <div class="row">
+      <div class="no">1</div>
+      <div><div class="name">Edward Bucknall</div><div class="desc">Cabin passenger · farmer</div></div>
+    </div>
+    <div class="row her">
+      <div class="no">2</div>
+      <div><div class="name">Mrs Bucknall</div><div class="desc">Wife of the above</div></div>
+    </div>
+    <div class="row">
+      <div class="no">3</div>
+      <div><div class="name">Harriet Martin</div><div class="desc">Servant</div></div>
+    </div>
+  </div>
+
+  <p class="thesis">The record gave one of them a name. This is the story of <em>the woman it did not</em>.</p>
+</header>
+
+<main>
+<section class="wrap">
+  <h2>The book</h2>
+  <p class="lead">In 1843 Sarah Tucker Bucknall left Stroud in Gloucestershire, sailed four months with her husband and her children, and began again on unbroken country in the Port Phillip District.</p>
+  <p>She raised eight children, buried some of them, and built Rodborough Vale. Her husband's name is on the memorial. Hers is on almost nothing at all.</p>
+  <p><em>Sarah of Rodborough</em> is drawn from surviving family letters, court records and photographs, and follows Sarah across fifty years — England to the colony, the diggings, the drought, and the long distances between a mother and the children the world scattered.</p>
+</section>
+
+<section class="wrap">
+  <h2>Two lines, one ship</h2>
+  <p>Harriet Martin sailed as the Bucknalls' servant. More than a century later, both women turn out to be ancestors of the same descendant — the author.</p>
+  <blockquote>The mistress and the maid, on the same passenger list, both grandmothers of the woman writing this.</blockquote>
+</section>
+
+<section class="wrap">
+  <h2>The author</h2>
+  <p>Di Williams is the founder and Chair of Fernwood Fitness and the author of three works of non-fiction. <em>Sarah of Rodborough</em> is her first novel. Sarah Tucker Bucknall was her great-great-grandmother.</p>
+</section>
+
+<section class="wrap">
+  <h2>News</h2>
+  <p class="note">The novel is in final editing. Publication details will be posted here.</p>
+  <p class="note">Follow along: <a href="https://instagram.com/YOUR-HANDLE">Instagram</a></p>
+</section>
+</main>
+
+<footer class="wrap">
+  <p>© 2026 Di Williams. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
