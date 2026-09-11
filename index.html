@@ -8,6 +8,15 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Archivo:wght@400;500&display=swap" rel="stylesheet">
+<!-- MailerLite Universal -->
+<script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '2629001');
+</script>
+<!-- End MailerLite Universal -->
 <style>
   :root{
     --ink:#2E2A24;
@@ -111,6 +120,65 @@
   a:hover{border-bottom-color:var(--gold)}
   a:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
 
+  /* ── Teasers ─────────────────────────────────────────── */
+  .teasers{border-top:1px solid rgba(203,182,130,.55);padding-top:2.75rem}
+  .teaser{
+    padding:1.4rem 0;
+    border-bottom:1px solid rgba(203,182,130,.4);
+    font-size:1.24rem;
+    line-height:1.5;
+  }
+  .teaser:last-of-type{border-bottom:0}
+  .teaser em{color:var(--gold);font-style:italic}
+
+  /* ── Signup ──────────────────────────────────────────── */
+  .signup{
+    margin-top:1rem;
+    padding:2.5rem 0 0.5rem;
+    text-align:center;
+  }
+  .signup h2{margin-bottom:.6rem}
+  .signup .ask{
+    font-size:1.3rem;
+    font-style:italic;
+    color:var(--ink);
+    margin:0 auto 1.75rem;
+    max-width:32rem;
+  }
+  /* Restyle the MailerLite embedded form to the house style */
+  .signup .ml-embedded{max-width:26rem;margin:0 auto}
+  .signup .ml-form-embedContainer *{font-family:"EB Garamond",Garamond,Georgia,serif !important}
+  .signup .ml-form-embedContainer .ml-form-embedWrapper{background:transparent !important}
+  .signup .ml-form-embedContainer .ml-form-embedContent,
+  .signup .ml-form-embedContainer .ml-form-embedHeader{display:none !important}
+  .signup input[type=email]{
+    width:100% !important;
+    border:1px solid var(--rule) !important;
+    background:var(--paper-deep) !important;
+    color:var(--ink) !important;
+    border-radius:0 !important;
+    padding:.85rem 1rem !important;
+    font-size:1.05rem !important;
+  }
+  .signup button,
+  .signup .ml-form-embedSubmit button{
+    background:var(--gold) !important;
+    color:#fff !important;
+    border:0 !important;
+    border-radius:0 !important;
+    font-family:Archivo,sans-serif !important;
+    letter-spacing:.12em !important;
+    text-transform:uppercase !important;
+    font-size:.8rem !important;
+    padding:.9rem 1rem !important;
+    box-shadow:none !important;
+  }
+  .signup button:hover{background:#8a6c2d !important}
+  .signup .consent{
+    font-size:.85rem;color:var(--soft);
+    margin:1.1rem auto 0;max-width:28rem;
+  }
+
   footer{
     padding:3rem 0 4rem;
     border-top:1px solid rgba(203,182,130,.55);
@@ -172,6 +240,24 @@
 <section class="wrap">
   <h2>The author</h2>
   <p>Di Williams is the founder and Chair of Fernwood Fitness and the author of three works of non-fiction. <em>Sarah of Rodborough</em> is her first novel. Sarah Tucker Bucknall was her great-great-grandmother.</p>
+</section>
+
+<section class="wrap">
+  <div class="teasers">
+    <div class="teaser">A woman named in the ship's register, and <em>left off the memorial</em> raised in her honour.</div>
+    <div class="teaser">Two families who crossed on the same barque in 1843 — and, a lifetime later, <em>became one</em>.</div>
+    <div class="teaser">A jeweller who sailed as a farmer, toward a life <em>he did not yet know how to live</em>.</div>
+    <div class="teaser">Eight children, a goldfield, a drought, and the long distances <em>between a mother and the world that scattered them</em>.</div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="signup">
+    <h2>Be the first to know</h2>
+    <p class="ask">Leave your email and I'll write to you once — when <em>Sarah of Rodborough</em> is published.</p>
+    <div class="ml-embedded" data-form="bxkuNU"></div>
+    <p class="consent">No news but this. Unsubscribe any time.</p>
+  </div>
 </section>
 
 <section class="wrap">
