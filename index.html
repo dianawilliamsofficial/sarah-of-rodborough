@@ -161,8 +161,11 @@
     font-size:1.05rem !important;
   }
   .signup button,
-  .signup .ml-form-embedSubmit button{
-    background:var(--gold) !important;
+  .signup .ml-form-embedSubmit button,
+  .signup .ml-form-embedSubmit button.primary,
+  .signup .ml-form-embedContainer .ml-form-embedSubmit button{
+    background-color:var(--gold) !important;
+    background-image:none !important;
     color:#fff !important;
     border:0 !important;
     border-radius:0 !important;
@@ -170,10 +173,13 @@
     letter-spacing:.12em !important;
     text-transform:uppercase !important;
     font-size:.8rem !important;
+    font-weight:500 !important;
     padding:.9rem 1rem !important;
     box-shadow:none !important;
   }
-  .signup button:hover{background:#8a6c2d !important}
+  .signup button:hover,
+  .signup .ml-form-embedSubmit button:hover,
+  .signup .ml-form-embedSubmit button.primary:hover{background-color:#8a6c2d !important}
   .signup .consent{
     font-size:.85rem;color:var(--soft);
     margin:1.1rem auto 0;max-width:28rem;
