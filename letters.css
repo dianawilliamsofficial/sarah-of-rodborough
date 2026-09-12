@@ -1,0 +1,136 @@
+/* ============================================================
+   The Recovered Letters — shared stylesheet
+   Sarah of Rodborough. Edit here to restyle every document page
+   (the ledger, and each letter). Conservation-mount palette.
+   ============================================================ */
+
+:root{
+  --mount:#5E6660;        /* the archive's conservation mount */
+  --mount-deep:#3E4642;
+  --paper:#EDE3CF;
+  --ink:#2E2117;
+  --ink-faded:#7C6A55;
+  --rule:#8A9089;
+  --dim:#C3CAC2;
+  --soft:#DED4BF;
+  --measure:34rem;
+}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{
+  margin:0;background:var(--mount);color:var(--paper);
+  font-family:Cardo,"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  font-size:19px;line-height:1.62;
+}
+.wrap{max-width:78rem;margin:0 auto;padding:0 1.5rem 6rem}
+a{color:var(--paper)}
+
+/* ---------- link home / back ---------- */
+.home{padding:1.6rem 0 0}
+.home a{font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;
+  color:var(--soft);border-bottom:1px solid rgba(237,227,207,.35);padding-bottom:.15rem}
+.home a:hover{border-bottom-color:var(--paper)}
+
+/* ---------- hero ---------- */
+.hero{padding:2.5rem 0 3rem}
+.hero figure{margin:0 0 2.25rem}
+.hero img{display:block;width:100%;height:auto;border-radius:2px;
+  box-shadow:0 1px 0 rgba(255,255,255,.18),0 18px 40px rgba(0,0,0,.28)}
+.hero h1{font-size:clamp(2rem,5.2vw,3.4rem);font-weight:400;line-height:1.14;margin:0 0 .9rem;max-width:24ch}
+.hero .standfirst{margin:0;max-width:var(--measure);color:var(--soft);font-size:1.08rem}
+.hero .standfirst + .standfirst{margin-top:1rem}
+.hero .eyebrow{font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;color:var(--dim);margin:0 0 1.1rem}
+
+/* ---------- where it sits in the book ---------- */
+.inbook{margin:2.5rem 0 0;padding:1.4rem 1.6rem;border-left:3px solid var(--paper);
+  background:rgba(0,0,0,.10);max-width:var(--measure)}
+.inbook p{margin:0;font-size:.98rem;color:var(--soft)}
+.inbook p + p{margin-top:.7rem}
+.inbook .quote{font-style:italic;color:var(--paper)}
+
+/* ---------- metadata ---------- */
+.meta{margin:3rem 0 0;padding-top:1.4rem;border-top:1px solid var(--rule);
+  display:grid;gap:1.1rem 2.5rem;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));max-width:60rem}
+.meta div{font-size:.95rem}
+.meta dt{color:var(--dim);font-style:italic;margin-bottom:.15rem}
+.meta dd{margin:0;color:var(--paper)}
+
+/* ---------- intro note above the leaves ---------- */
+.intro-note{margin:3.2rem 0 0;padding:.85rem 0;border-bottom:1px solid var(--rule)}
+.intro-note p{margin:0;font-size:.92rem;color:var(--dim);font-style:italic}
+
+/* ---------- a leaf: image beside its transcript ---------- */
+.leaf{display:grid;gap:2.5rem;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);
+  align-items:start;padding:3.5rem 0;border-bottom:1px solid var(--rule)}
+.leaf:last-of-type{border-bottom:0}
+.leaf img{display:block;width:100%;height:auto;border-radius:2px;
+  box-shadow:0 1px 0 rgba(255,255,255,.16),0 14px 32px rgba(0,0,0,.26)}
+.leaf figure{margin:0;position:sticky;top:1.5rem}
+.leaf figcaption{margin-top:.7rem;font-size:.88rem;font-style:italic;color:var(--dim)}
+
+.sheet{background:var(--paper);color:var(--ink);border-radius:2px;
+  padding:2.4rem 2.2rem;box-shadow:0 14px 32px rgba(0,0,0,.22)}
+.sheet h2{font-size:1rem;font-weight:400;font-style:italic;color:var(--ink-faded);margin:0 0 1.5rem}
+.rlabel{font-size:.8rem;font-weight:400;font-style:italic;color:var(--ink-faded);
+  margin:1.9rem 0 .9rem;padding-top:1.2rem;border-top:1px solid #D8CBB2}
+
+/* diplomatic (as written), line by line */
+.diplomatic .l{display:block;padding-left:0}
+.diplomatic .l.blank{height:.9em}
+.diplomatic .ind{padding-left:2.5rem}
+
+/* reading text */
+.reading p{margin:0 0 1.15rem;max-width:42ch}
+.reading p:last-child{margin-bottom:0}
+.reading .sign{font-style:italic}
+.reading .close{margin-left:1.5rem}
+
+.unc{border-bottom:1px dotted #A8926F;cursor:help}
+.sup{color:var(--ink-faded)}
+
+/* ---------- a ledger table (for the immigration record) ---------- */
+.ledger{width:100%;border-collapse:collapse;font-size:.98rem}
+.ledger caption{text-align:left;font-style:italic;color:var(--ink-faded);margin-bottom:1rem;font-size:.92rem}
+.ledger th{font-weight:400;font-style:italic;color:var(--ink-faded);text-align:left;
+  border-bottom:1px solid #C9B79A;padding:.35rem .5rem}
+.ledger td{padding:.42rem .5rem;border-bottom:1px solid #D8CBB2;vertical-align:baseline}
+.ledger td.n{color:#B0A18B;font-size:.82rem;width:1.6rem}
+.ledger td.age{white-space:nowrap;color:var(--ink-faded)}
+.ledger tr.her td.name{color:#8A5A1E;font-style:italic}
+.ledger tr.rule-top td{border-top:2px solid #C9B79A}
+
+/* ---------- notes ---------- */
+.notes{margin-top:4rem;padding-top:1.6rem;border-top:1px solid var(--rule);max-width:var(--measure)}
+.notes h2{font-size:1.35rem;font-weight:400;margin:0 0 1rem}
+.notes p{margin:0 0 1rem;font-size:.98rem;color:var(--soft)}
+.notes ul{margin:0 0 1rem;padding-left:1.1rem;font-size:.98rem;color:var(--soft)}
+.notes li{margin-bottom:.45rem}
+.credit{font-size:.9rem;font-style:italic;color:var(--dim)}
+
+/* ---------- index grid (the Recovered Letters landing page) ---------- */
+.grid{display:grid;gap:2rem;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));
+  margin-top:3.5rem;padding-top:2.5rem;border-top:1px solid var(--rule)}
+.card{display:flex;flex-direction:column;background:rgba(0,0,0,.10);border-radius:3px;overflow:hidden;
+  text-decoration:none;color:var(--paper);border:1px solid transparent;transition:border-color .18s,transform .18s}
+.card:hover{border-color:var(--rule);transform:translateY(-2px)}
+.card .thumb{aspect-ratio:4/3;overflow:hidden;background:var(--mount-deep)}
+.card .thumb img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.92);transition:transform .3s}
+.card:hover .thumb img{transform:scale(1.03)}
+.card .cbody{padding:1.2rem 1.3rem 1.5rem}
+.card .kicker{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);margin:0 0 .5rem}
+.card h2{font-size:1.4rem;font-weight:400;line-height:1.18;margin:0 0 .6rem}
+.card p{margin:0;font-size:.98rem;color:var(--soft)}
+.card .more{margin-top:.9rem;font-size:.85rem;font-style:italic;color:var(--dim)}
+.card.soon{background:rgba(0,0,0,.05);border:1px dashed var(--rule);cursor:default}
+.card.soon:hover{transform:none}
+.card.soon .thumb{display:flex;align-items:center;justify-content:center;color:var(--dim);font-style:italic;font-size:.9rem}
+.card.soon h2{color:var(--soft)}
+
+@media (max-width:56rem){
+  .leaf{grid-template-columns:1fr;gap:1.6rem;padding:2.5rem 0}
+  .leaf figure{position:static}
+  .sheet{padding:1.8rem 1.4rem}
+  body{font-size:18px}
+}
